@@ -30,9 +30,9 @@ const PropertyXGuide = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-    Tokenisation vs Registered Co-Ownership (RCO)</h2>
-<p>Complete feature comparison based on legal and operational framework</p>
-          
+            Tokenisation vs Registered Co-Ownership (RCO)</h2>
+          <p>Complete feature comparison based on legal and operational framework</p>
+
 
         </div>
 
@@ -42,7 +42,7 @@ const PropertyXGuide = () => {
             <h2 className="text-xl font-bold text-gray-800">Tokenisation vs Registered Co-Ownership (RCO)</h2>
             <p className="text-sm text-gray-500 mt-1">Complete feature comparison based on legal and operational framework</p>
           </div>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full text-sm md:text-base">
               <thead className="bg-gray-50">
@@ -69,7 +69,7 @@ const PropertyXGuide = () => {
               </tbody>
             </table>
           </div>
-          
+
           <div className="bg-gray-50 px-4 py-2 text-right text-xs text-gray-400 border-t border-gray-200">
             Legally enforceable framework | Secure Direct Rights (SDR) with Option To Convert (OTC)
           </div>
@@ -79,49 +79,48 @@ const PropertyXGuide = () => {
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="p-6 md:p-8 lg:p-10">
 
-             <div className="flex flex-wrap gap-2 mb-6 border-b border-gray-200 pb-3">
-      {tabs.map((tab) => (
-        <button
-          key={tab.id}
-          onClick={() => setActiveTab(tab.id)}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
-            activeTab === tab.id
-              ? 'bg-blue-600 text-white shadow'
-              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-          }`}
-        >
-          {tab.label}
-        </button>
-      ))}
-    </div>
+            <div className="flex flex-wrap gap-2 mb-6 border-b border-gray-200 pb-3">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === tab.id
+                      ? 'bg-blue-600 text-white shadow'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
 
-            
+
             {/* Ownership Modes Tab Content */}
             {activeTab === 'ownershipModes' && (
               <>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                   Ownership Modes at PropertyX
                 </h2>
-                
+
                 <div className="prose prose-lg max-w-none text-gray-600 space-y-5">
                   <p>
                     PropertyX introduces a pioneering new product that will enable investors the ability to invest in further smaller amounts as well as have much diversified and deeper options to exit from these investments. Our promise hasn't changed and remains the same – <strong className="text-gray-900">you own and control where you invest</strong>. With our new product you get the power of Distributed Ledger Technology – now you have better control, better transparency, and better governance.
                   </p>
-                  
+
                   <p>
                     Now, we offer property tokens alongside our well established <strong className="text-gray-900">'Registered Co-ownership' (RCO)</strong> product. The Property Tokens hold a <strong className="text-gray-900">'Right to Registered Co-Ownership'</strong>.
                   </p>
-                  
+
                   <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
                     <p className="text-gray-700">
                       The Property Tokens offer legally enforceable <strong className="text-gray-900">Secure Direct Rights (SDR)</strong> over the property with an <strong className="text-gray-900">Option To Convert (OTC)</strong> into a proportionate Registered Co-Ownership by exhausting the token. Such right, when exercised by the Token Holder can be executed into Registered Co-Ownership through a deed executed at Sub-Registrar's office.
                     </p>
                   </div>
-                  
+
                   <p>
                     As investor, you will have full beneficial rights emanating from the property (as a Registered Co-owner would) and such rights and terms are established within the Property Token.
                   </p>
-                  
+
                   <div className="bg-green-50 border border-green-200 rounded-xl p-5 my-6">
                     <p className="text-gray-800 font-medium">
                       Best of all, <span className="text-green-700">your rights and obligations are also legally enforceable</span>. PropertyX is a global pioneer in introducing this – so you can feel safe and invest with confidence.
@@ -244,7 +243,7 @@ const PropertyXGuide = () => {
             <h4 className="font-semibold text-gray-900 mb-2">Better Control</h4>
             <p className="text-sm text-gray-500">Full ownership and control over your investment decisions</p>
           </div>
-          
+
           <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -255,7 +254,7 @@ const PropertyXGuide = () => {
             <h4 className="font-semibold text-gray-900 mb-2">Better Transparency</h4>
             <p className="text-sm text-gray-500">Distributed Ledger Technology ensures complete visibility</p>
           </div>
-          
+
           <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -265,7 +264,7 @@ const PropertyXGuide = () => {
             <h4 className="font-semibold text-gray-900 mb-2">Better Governance</h4>
             <p className="text-sm text-gray-500">Legally enforceable rights and structured processes</p>
           </div>
-          
+
           <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

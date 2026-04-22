@@ -1,84 +1,129 @@
 import React from "react";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaXTwitter,
+} from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 import logo from "../images/NewLogoWhite-B8AvPPTY.png";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-gray-700 px-6 md:px-20 py-12">
+    <footer className="bg-gray-50 text-gray-600 border-t border-gray-200">
       
-      {/* Top Section */}
-      <div className="grid md:grid-cols-3 gap-10 border-b border-gray-300 pb-10">
-        
-        {/* Left - Logo + Description */}
-        <div>
-          <div className="flex items-center gap-3 mb-4">
-            
-            {/* 🔥 Increased Logo Size */}
-            <img
-              src={logo}
-              alt="PropertyX"
-              className="w-16 md:w-20 object-contain"
-            />
-  
-          </div>
+      {/* TOP SECTION */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-5 gap-10">
 
-          <p className="text-sm leading-relaxed text-gray-600">
-            Propx (PropertyX) – fractional ownership from 1 sq ft in marriage halls,
-            event lawns, and diversified real estate. SPV-backed assets, rental revenue
-            sharing, and a roadmap to internal marketplace liquidity.
+        {/* BRAND */}
+        <div className="md:col-span-2">
+          <img src={logo} alt="PropertyX" className="h-10 mb-5" />
+
+          <p className="text-sm leading-relaxed text-gray-500 mb-6 max-w-md">
+            Propx (PropertyX) is a modern fractional ownership platform enabling
+            investors to participate in premium real estate with SPV-backed
+            assets, passive rental income, and seamless marketplace liquidity.
           </p>
+
+          {/* SOCIAL */}
+          <div className="flex gap-3">
+            {[FaFacebookF, FaLinkedinIn, FaInstagram, FaXTwitter].map(
+              (Icon, i) => (
+                <div
+                  key={i}
+                  className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow-sm border hover:bg-blue-600 hover:text-white transition cursor-pointer"
+                >
+                  <Icon size={14} />
+                </div>
+              )
+            )}
+          </div>
         </div>
 
-        {/* Company Links */}
+        {/* COMPANY */}
         <div>
-          <h3 className="text-black font-semibold mb-4">Company</h3>
-          <ul className="space-y-2 text-sm">
-            <li className="hover:text-black cursor-pointer">How it works</li>
-            <li className="hover:text-black cursor-pointer">Whitepaper</li>
-            <li className="hover:text-black cursor-pointer">FAQs</li>
-            <li className="hover:text-black cursor-pointer">Partners</li>
+          <h3 className="text-gray-900 font-semibold mb-4">Company</h3>
+          <ul className="space-y-3 text-sm">
+            {["How it works", "Whitepaper", "FAQs", "Partners"].map((item) => (
+              <li
+                key={item}
+                className="hover:text-blue-600 cursor-pointer transition"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Connect + Social */}
+        {/* RESOURCES */}
         <div>
-          <h3 className="text-black font-semibold mb-4">Connect Us</h3>
-          <p className="text-sm mb-4 text-gray-600">Netreats.in</p>
+          <h3 className="text-gray-900 font-semibold mb-4">Resources</h3>
+          <ul className="space-y-3 text-sm">
+            {["Blog", "Help Center", "Support", "Contact"].map((item) => (
+              <li
+                key={item}
+                className="hover:text-blue-600 cursor-pointer transition"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-          <h3 className="text-black font-semibold mb-3">Follow Us</h3>
-          <div className="flex gap-3">
-            <div className="bg-blue-600 text-white p-2 rounded cursor-pointer">
-              <FaFacebookF />
-            </div>
-            <div className="bg-blue-500 text-white p-2 rounded cursor-pointer">
-              <FaLinkedinIn />
-            </div>
-            <div className="bg-pink-500 text-white p-2 rounded cursor-pointer">
-              <FaInstagram />
-            </div>
-            <div className="bg-black text-white p-2 rounded cursor-pointer">
-              <FaXTwitter />
-            </div>
+        {/* NEWSLETTER */}
+        <div>
+          <h3 className="text-gray-900 font-semibold mb-4">
+            Subscribe Newsletter
+          </h3>
+
+          <p className="text-sm text-gray-500 mb-4">
+            Get updates on new properties and investment opportunities.
+          </p>
+
+          <div className="flex items-center border rounded-lg overflow-hidden bg-white shadow-sm">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-3 py-2 text-sm outline-none"
+            />
+            <button className="bg-white-600 text-white px-4 py-2 hover:bg-white-700 transition">
+              <MdEmail />
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Disclaimer */}
-      <div className="mt-10 border-b border-gray-300 pb-6">
-        <h4 className="text-black mb-3">Safe Harbor and Disclaimer</h4>
-        <p className="text-sm leading-relaxed text-gray-600">
-          Propx / PropertyX merely provides a platform for legal co-ownership of property assets.
-          Such co-ownership is offered solely for financial investment and returns from property investing.
-          Investment opportunities may carry substantial risk and investors should seek advice before investing.
-          Information regarding returns may be based on reasonable growth scenarios provided by the seller.
-          These investments do not carry any government or regulatory protection and investors must be willing
-          to sustain the risk of loss of capital, including total loss.
+      {/* DIVIDER */}
+      <div className="border-t border-gray-200"></div>
+
+      {/* DISCLAIMER */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 text-xs text-gray-500 leading-relaxed">
+        <h4 className="font-semibold text-gray-700 mb-3">
+          Safe Harbor & Disclaimer
+        </h4>
+        <p>
+          Propx / PropertyX provides a platform for co-ownership of property
+          assets. Investments may carry risk, including potential loss of
+          capital. Information provided is based on reasonable scenarios but
+          does not guarantee returns. Investors are advised to seek professional
+          financial advice before investing.
         </p>
       </div>
 
-      {/* Bottom */}
-      <div className="text-center text-sm text-gray-500 mt-6">
-        © 2026 PropertyX. All rights reserved.
+      {/* BOTTOM BAR */}
+      <div className="border-t border-gray-200 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <p>© 2026 PropertyX. All rights reserved.</p>
+
+          <div className="flex gap-6 mt-3 md:mt-0">
+            <span className="hover:text-blue-600 cursor-pointer">
+              Privacy Policy
+            </span>
+            <span className="hover:text-blue-600 cursor-pointer">
+              Terms & Conditions
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
   );
