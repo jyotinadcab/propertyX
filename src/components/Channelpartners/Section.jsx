@@ -33,12 +33,12 @@ const Section = () => {
   ];
 
   // Sample criteria for becoming a partner
-  const criteria = [
-    'Minimum 2 years of real estate experience',
-    'Proven track record of successful deals',
-    'Access to a network of 50+ qualified investors',
-    'Commitment to ethical business practices'
-  ];
+  // const criteria = [
+  //   'Minimum 2 years of real estate experience',
+  //   'Proven track record of successful deals',
+  //   'Access to a network of 50+ qualified investors',
+  //   'Commitment to ethical business practices'
+  // ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">

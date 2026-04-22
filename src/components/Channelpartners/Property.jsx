@@ -2,7 +2,7 @@ import React from "react";
 import {
   Users,
   ArrowRight,
-  Sparkles,
+  // Sparkles,
   ShieldCheck,
   TrendingUp,
 } from "lucide-react";

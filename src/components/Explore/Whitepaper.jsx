@@ -7,9 +7,9 @@ import {
   Users,
   MapPin,
   BarChart3,
-  Award,
+  // Award,
   ChevronRight,
-  Sparkles,
+  // Sparkles,
   Landmark,
   Calendar,
 } from "lucide-react";

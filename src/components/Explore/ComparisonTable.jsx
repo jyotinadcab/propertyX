@@ -78,6 +78,23 @@ const PropertyXGuide = () => {
         {/* Main Content - Changes based on active tab */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="p-6 md:p-8 lg:p-10">
+
+             <div className="flex flex-wrap gap-2 mb-6 border-b border-gray-200 pb-3">
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          onClick={() => setActiveTab(tab.id)}
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
+            activeTab === tab.id
+              ? 'bg-blue-600 text-white shadow'
+              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+          }`}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+
             
             {/* Ownership Modes Tab Content */}
             {activeTab === 'ownershipModes' && (
