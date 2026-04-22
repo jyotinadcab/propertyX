@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import AuthLayout from "../components/AuthLayout";
-import InputField from "../components/InputField";
-import Button from "../components/Button";
+import AuthLayout from "../Auth/AuthLayout";
+import InputField from "../Auth/InputField";
+import Button from "../Auth/Button";
 import { Link } from "react-router-dom";
 
 const Login = () => {

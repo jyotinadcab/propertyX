@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import Navbar from './components/Navbar';
-// import Login from "./Pages/Login";
-// import Signup from "./Pages/Signup";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
 import Hero from "./components/Hero";
 import Guide from "./components/Guide";
 import Partners from "./components/Partners";
@@ -28,22 +27,16 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-
-      {/* Navigation */}
-
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Faqs" element={<Faqs />} />
         <Route path="/Propertyx" element={<Propertyx />} />
-           {/* <Route path="/Login" element={<Login />} />
-          <Route path="/Signup" element={<Signup />} /> */}
+        <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
         <Route path="/PropertyXGuide" element={<PropertyXGuide />} />
         <Route path="/ComparisonTable" element={<ComparisonTable />} />
         <Route path="Whitepaper" element={<Whitepaper />} />
-
       </Routes>
-
       <Footer />
     </Router>
   );

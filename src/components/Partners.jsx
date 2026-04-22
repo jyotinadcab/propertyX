@@ -13,7 +13,7 @@ import partner2 from "../images/PartnerImg4-BtXmlwsd.webp";
 import partner3 from "../images/PartnerImg6-DIFAwhMO.webp";
 import partner4 from "../images/download.png";
 import partner5 from "../images/download.webp";
-import partner6 from "../images/download3.png";
+import partner6 from "../images/PartnerImg6-DIFAwhMO.webp";
 
 const topLogos = [
   banner1,
@@ -44,7 +44,7 @@ const Partners = () => {
       {/* Heading */}
       <div className="text-center mb-16 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-          Property<span className="text-blue-500">X</span> in News
+          Property<span className="text-[#2c92ad]">X</span> in News
         </h2>
         <p className="text-gray-500 mt-3 text-sm md:text-base">
           Trusted and featured across top platforms
@@ -71,7 +71,7 @@ const Partners = () => {
 
       {/* Partners Heading */}
       <h2 className="text-center text-3xl md:text-4xl font-semibold mb-14 relative z-10">
-        Our <span className="text-blue-500">Partners</span>
+        Our <span className="text-[#2c92ad]">Partners</span>
       </h2>
 
       {/* 💎 Premium Card Grid */}

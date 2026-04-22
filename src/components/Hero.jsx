@@ -6,7 +6,7 @@ import building from "../images/youtubeImg3-ClQnfoZh.webp";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-white via-blue-50 to-white text-gray-900 overflow-hidden font-[Inter]">
+    <div className="relative min-h-screen bg-white text-gray-900 overflow-hidden font-[Inter]">
 
       {/* CONTAINER */}
       <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row items-center justify-between">
@@ -15,14 +15,14 @@ const Hero = () => {
         <div className="max-w-xl z-10">
 
           {/* TOP TAG */}
-          <span className="inline-block px-4 py-1 text-xs tracking-widest bg-blue-100 text-blue-600 rounded-full mb-4">
+          <span className="inline-block px-4 py-1 text-xs tracking-widest bg-[#e6f4f7] text-[#2c92ad] rounded-full mb-4">
             FUTURE OF REAL ESTATE
           </span>
 
           {/* MAIN HEADING */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
             PROPERTY
-            <span className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#2c92ad] to-[#247c92] bg-clip-text text-transparent">
               X
             </span>
           </h1>
@@ -31,7 +31,7 @@ const Hero = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug mt-4 text-gray-800">
             Fractional Real Estate <br />
             for India’s{" "}
-            <span className="text-blue-600 font-bold">
+            <span className="text-[#2c92ad] font-bold">
               Wedding & Event Economy
             </span>
           </h2>
@@ -46,7 +46,7 @@ const Hero = () => {
           {/* BUTTONS */}
           <div className="flex gap-4 mt-8 flex-wrap">
 
-            <button className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 transition">
+            <button className="bg-gradient-to-r from-[#2c92ad] to-[#247c92] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 transition">
               Start Investing
             </button>
 
@@ -54,7 +54,7 @@ const Hero = () => {
               Read Whitepaper
             </button>
 
-            <button className="text-blue-600 font-medium text-sm hover:underline">
+            <button className="text-[#2c92ad] font-medium text-sm hover:underline">
               How it works →
             </button>
 
@@ -63,7 +63,7 @@ const Hero = () => {
 
         {/* RIGHT IMAGE */}
         <div className="relative mt-12 lg:mt-0">
-          <div className="absolute -inset-4 bg-blue-100 blur-2xl opacity-40 rounded-xl"></div>
+          <div className="absolute -inset-4 bg-[#2c92ad] blur-2xl opacity-20 rounded-xl"></div>
 
           <img
             src={building}
@@ -77,7 +77,7 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto px-6 pb-20 grid md:grid-cols-3 gap-6">
 
         {/* CARD 1 */}
-        <div className="backdrop-blur-lg bg-white/80 rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <div className="backdrop-blur-lg bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
           <img src={icon1} alt="" className="w-14 mb-4" />
           <h3 className="font-semibold text-lg text-gray-800">
             Measurable Ownership
@@ -88,7 +88,7 @@ const Hero = () => {
         </div>
 
         {/* CARD 2 */}
-        <div className="backdrop-blur-lg bg-white/80 rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <div className="backdrop-blur-lg bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
           <img src={icon2} alt="" className="w-14 mb-4" />
           <h3 className="font-semibold text-lg text-gray-800">
             Event Real Estate
@@ -99,7 +99,7 @@ const Hero = () => {
         </div>
 
         {/* CARD 3 */}
-        <div className="backdrop-blur-lg bg-white/80 rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <div className="backdrop-blur-lg bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
           <img src={icon3} alt="" className="w-14 mb-4" />
           <h3 className="font-semibold text-lg text-gray-800">
             Tokens & Income

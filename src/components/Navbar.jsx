@@ -164,9 +164,24 @@ const Navbar = () => {
             </div>
           )}
 
-          <button className="w-full bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-medium transition">
-            Login / Signup
-          </button>
+               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12">
+
+          <Link
+            to="/Pages/Login"
+            className="group relative px-5 py-2.5 bg-gradient-to-r from-green-900 to-green-700 text-white rounded-full text-sm font-semibold no-underline hover:no-underline hover:from-green-800 hover:to-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 backdrop-blur-sm"
+          >
+            <span>Login</span>
+          </Link>
+
+          {/* Registration Button */}
+          <Link
+            to="/Pages/Signup"
+            className="group relative px-5 py-2.5 bg-gradient-to-r from-green-900 to-green-700 text-white rounded-full text-sm font-semibold no-underline hover:no-underline hover:from-green-800 hover:to-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 backdrop-blur-sm"
+          >
+            <span>Registration</span>
+          </Link>
+
+        </div>
 
           <select className="w-full bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm focus:outline-none">
             <option>Select Language</option>
