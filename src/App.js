@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import ScrollToTop from "./components/ScrollToTop";
