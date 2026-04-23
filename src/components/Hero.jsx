@@ -4,19 +4,30 @@ import icon2 from "../images/icon2.png";
 import icon3 from "../images/icon3.png";
 import building from "../images/youtubeImg3-ClQnfoZh.webp";
 
+// Reusable Card Component
+const FeatureCard = ({ icon, title, desc }) => {
+  return (
+    <div className="backdrop-blur-lg bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <img src={icon} alt={title} className="w-14 mb-4" />
+      <h3 className="font-semibold text-lg text-gray-800">{title}</h3>
+      <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+        {desc}
+      </p>
+    </div>
+  );
+};
+
 const Hero = () => {
   return (
     <div className="relative min-h-screen bg-white text-gray-900 overflow-hidden font-[Inter]">
 
-      {/* CONTAINER */}
+      {/* MAIN CONTAINER */}
       <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row items-center justify-between">
 
         {/* LEFT CONTENT */}
         <div className="max-w-xl z-10">
 
-     
-
-          {/* MAIN HEADING */}
+          {/* HEADING */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
             PROPERTY
             <span className="bg-gradient-to-r from-[#2c92ad] to-[#247c92] bg-clip-text text-transparent">
@@ -64,47 +75,32 @@ const Hero = () => {
 
           <img
             src={building}
-            alt="building"
+            alt="Event property"
             className="relative w-[350px] md:w-[450px] lg:w-[520px] rounded-2xl shadow-xl"
           />
         </div>
       </div>
 
-      {/* CARDS SECTION */}
+      {/* FEATURE CARDS */}
       <div className="max-w-6xl mx-auto px-6 pb-20 grid md:grid-cols-3 gap-6">
 
-        {/* CARD 1 */}
-        <div className="backdrop-blur-lg bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
-          <img src={icon1} alt="" className="w-14 mb-4" />
-          <h3 className="font-semibold text-lg text-gray-800">
-            Measurable Ownership
-          </h3>
-          <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-            Start from 1 sq.ft with asset-backed units secured through SPV structures.
-          </p>
-        </div>
+        <FeatureCard
+          icon={icon1}
+          title="Measurable Ownership"
+          desc="Start from 1 sq.ft with asset-backed units secured through SPV structures."
+        />
 
-        {/* CARD 2 */}
-        <div className="backdrop-blur-lg bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
-          <img src={icon2} alt="" className="w-14 mb-4" />
-          <h3 className="font-semibold text-lg text-gray-800">
-            Event Real Estate
-          </h3>
-          <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-            Invest in marriage halls, lawns & banquet spaces with recurring booking income.
-          </p>
-        </div>
+        <FeatureCard
+          icon={icon2}
+          title="Event Real Estate"
+          desc="Invest in marriage halls, lawns & banquet spaces with recurring booking income."
+        />
 
-        {/* CARD 3 */}
-        <div className="backdrop-blur-lg bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
-          <img src={icon3} alt="" className="w-14 mb-4" />
-          <h3 className="font-semibold text-lg text-gray-800">
-            Tokens & Income
-          </h3>
-          <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-            Convert sq.ft into tokens for liquidity and earn from rental distributions.
-          </p>
-        </div>
+        <FeatureCard
+          icon={icon3}
+          title="Tokens & Income"
+          desc="Convert sq.ft into tokens for liquidity and earn from rental distributions."
+        />
 
       </div>
     </div>
