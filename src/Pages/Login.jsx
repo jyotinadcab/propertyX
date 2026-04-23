@@ -59,7 +59,7 @@ export default function Login() {
         </div>
 
         <h2 className="text-2xl font-semibold text-white text-center">
-          Welcome Back 
+          Welcome Back
         </h2>
 
         <p className="text-gray-400 text-center text-sm mt-2 mb-6">
@@ -89,11 +89,10 @@ export default function Login() {
           <button
             type="submit"
             disabled={!isValid}
-            className={`w-full py-3 rounded-lg font-semibold transition ${
-              isValid
+            className={`w-full py-3 rounded-lg font-semibold transition ${isValid
                 ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:opacity-90"
                 : "bg-gray-700 text-gray-400 cursor-not-allowed"
-            }`}
+              }`}
           >
             Send OTP
           </button>

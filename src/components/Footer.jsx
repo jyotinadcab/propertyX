@@ -27,7 +27,6 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 text-gray-600 border-t border-gray-200">
       
-      {/* TOP SECTION */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-5 gap-10">
 
         {/* BRAND */}
@@ -61,10 +60,7 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             {companyLinks.map((item, index) => (
               <li key={index}>
-                <Link
-                  to={item.path}
-                  className="hover:text-blue-600 transition"
-                >
+                <Link to={item.path} className="hover:text-blue-600 transition">
                   {item.name}
                 </Link>
               </li>
@@ -78,10 +74,7 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             {resourceLinks.map((item, index) => (
               <li key={index}>
-                <Link
-                  to={item.path}
-                  className="hover:text-blue-600 transition"
-                >
+                <Link to={item.path} className="hover:text-blue-600 transition">
                   {item.name}
                 </Link>
               </li>
@@ -105,17 +98,15 @@ const Footer = () => {
               placeholder="Enter your email"
               className="flex-1 px-3 py-2 text-sm outline-none"
             />
-       <button className="bg-[#2c92ad] text-white px-4 py-2 hover:bg-[#237a90] transition">
+            <button className="bg-[#2c92ad] text-white px-4 py-2 hover:bg-[#237a90] transition">
               <MdEmail />
             </button>
           </div>
         </div>
       </div>
 
-      {/* DIVIDER */}
       <div className="border-t border-gray-200"></div>
 
-      {/* DISCLAIMER */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 text-xs text-gray-500 leading-relaxed">
         <h4 className="font-semibold text-gray-700 mb-3">
           Safe Harbor & Disclaimer
@@ -123,12 +114,10 @@ const Footer = () => {
         <p>
           Propx / PropertyX provides a platform for co-ownership of property
           assets. Investments may carry risk, including potential loss of
-          capital. Information provided is based on reasonable scenarios but
-          does not guarantee returns.
+          capital.
         </p>
       </div>
 
-      {/* BOTTOM BAR */}
       <div className="border-t border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>© 2026 PropertyX. All rights reserved.</p>

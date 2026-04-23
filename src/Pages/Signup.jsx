@@ -53,15 +53,15 @@ export default function Signup() {
       <div className="absolute w-[400px] h-[400px] bg-blue-600/30 blur-[140px] rounded-full bottom-[-100px] left-[-100px]"></div>
 
       <div className="relative w-[380px] bg-white/5 border border-white/10 rounded-2xl p-8 shadow-2xl backdrop-blur-xl">
-        
+
         <div className="flex justify-center mb-4">
-            <div className="flex justify-center mb-4">
-          <img
-            src={image}
-            alt="Logo"
-            className="w-28 object-contain"
-          />
-        </div>
+          <div className="flex justify-center mb-4">
+            <img
+              src={image}
+              alt="Logo"
+              className="w-28 object-contain"
+            />
+          </div>
         </div>
 
         <h2 className="text-2xl font-semibold text-white text-center">
@@ -109,11 +109,10 @@ export default function Signup() {
           <button
             type="submit"
             disabled={!isValid}
-            className={`w-full py-3 rounded-lg font-semibold transition ${
-              isValid
+            className={`w-full py-3 rounded-lg font-semibold transition ${isValid
                 ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:opacity-90"
                 : "bg-gray-700 text-gray-400 cursor-not-allowed"
-            }`}
+              }`}
           >
             Send OTP
           </button>
