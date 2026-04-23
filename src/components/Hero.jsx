@@ -15,9 +15,9 @@ const Hero = () => {
         <div className="max-w-xl z-10">
 
           {/* TOP TAG */}
-          <span className="inline-block px-4 py-1 text-xs tracking-widest bg-[#e6f4f7] text-[#2c92ad] rounded-full mb-4">
+          {/* <span className="inline-block px-4 py-1 text-xs tracking-widest bg-[#e6f4f7] text-[#2c92ad] rounded-full mb-4">
             FUTURE OF REAL ESTATE
-          </span>
+          </span> */}
 
           {/* MAIN HEADING */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
