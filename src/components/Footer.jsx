@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -9,6 +10,20 @@ import { MdEmail } from "react-icons/md";
 import logo from "../images/NewLogoWhite-B8AvPPTY.png";
 
 const Footer = () => {
+  const companyLinks = [
+    { name: "How It Works", path: "/PropertyXGuide" },
+    { name: "Whitepaper", path: "/Whitepaper" },
+    { name: "Why PropertyX", path: "/PropertyX" },
+    { name: "About Us", path: "/ComparisonTable" },
+  ];
+
+  const resourceLinks = [
+    { name: "Blog", path: "/blog" },
+    { name: "Help Center", path: "/Helpcenter" },
+    { name: "Support", path: "/support" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
     <footer className="bg-gray-50 text-gray-600 border-t border-gray-200">
       
@@ -44,12 +59,14 @@ const Footer = () => {
         <div>
           <h3 className="text-gray-900 font-semibold mb-4">Company</h3>
           <ul className="space-y-3 text-sm">
-            {["How it works", "Whitepaper", "FAQs", "Partners"].map((item) => (
-              <li
-                key={item}
-                className="hover:text-blue-600 cursor-pointer transition"
-              >
-                {item}
+            {companyLinks.map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={item.path}
+                  className="hover:text-blue-600 transition"
+                >
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -59,12 +76,14 @@ const Footer = () => {
         <div>
           <h3 className="text-gray-900 font-semibold mb-4">Resources</h3>
           <ul className="space-y-3 text-sm">
-            {["Blog", "Help Center", "Support", "Contact"].map((item) => (
-              <li
-                key={item}
-                className="hover:text-blue-600 cursor-pointer transition"
-              >
-                {item}
+            {resourceLinks.map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={item.path}
+                  className="hover:text-blue-600 transition"
+                >
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -86,7 +105,7 @@ const Footer = () => {
               placeholder="Enter your email"
               className="flex-1 px-3 py-2 text-sm outline-none"
             />
-            <button className="bg-white-600 text-white px-4 py-2 hover:bg-white-700 transition">
+       <button className="bg-[#2c92ad] text-white px-4 py-2 hover:bg-[#237a90] transition">
               <MdEmail />
             </button>
           </div>
@@ -105,8 +124,7 @@ const Footer = () => {
           Propx / PropertyX provides a platform for co-ownership of property
           assets. Investments may carry risk, including potential loss of
           capital. Information provided is based on reasonable scenarios but
-          does not guarantee returns. Investors are advised to seek professional
-          financial advice before investing.
+          does not guarantee returns.
         </p>
       </div>
 
@@ -116,12 +134,12 @@ const Footer = () => {
           <p>© 2026 PropertyX. All rights reserved.</p>
 
           <div className="flex gap-6 mt-3 md:mt-0">
-            <span className="hover:text-blue-600 cursor-pointer">
+            <Link to="/privacy" className="hover:text-blue-600">
               Privacy Policy
-            </span>
-            <span className="hover:text-blue-600 cursor-pointer">
+            </Link>
+            <Link to="/terms" className="hover:text-blue-600">
               Terms & Conditions
-            </span>
+            </Link>
           </div>
         </div>
       </div>
