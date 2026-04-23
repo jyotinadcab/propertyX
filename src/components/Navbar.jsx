@@ -62,15 +62,24 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Desktop Right */}
+      {/* Desktop Right (FIXED HERE) */}
       <div className="hidden md:flex items-center gap-4">
+        
 
-        {/* Single Auth Button */}
+        {/* Login Button */}
         <Link
           to="/Login"
-          className="bg-gradient-to-r from-red-500 to-green-600 hover:opacity-90 text-white px-5 py-2 rounded-lg font-medium transition"
+          className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-medium transition"
         >
-          Login / Signup
+          Login
+        </Link>
+
+        {/* Signup Button */}
+        <Link
+          to="/Signup"
+          className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg font-medium transition"
+        >
+          Signup
         </Link>
 
         {/* Language */}
@@ -109,13 +118,13 @@ const Navbar = () => {
             </div>
           )}
 
-          {/* Single Mobile Auth Button */}
-          <Link
-            to="/Login"
-            onClick={closeAll}
-            className="bg-gradient-to-r from-red-500 to-green-600 text-white px-4 py-2 rounded text-center"
-          >
-            Login / Signup
+          {/* Mobile Auth */}
+          <Link to="/Login" onClick={closeAll} className="bg-green-700 text-white px-4 py-2 rounded text-center">
+            Login
+          </Link>
+
+          <Link to="/Signup" onClick={closeAll} className="bg-green-700 text-white px-4 py-2 rounded text-center">
+            Signup
           </Link>
 
           <select className="w-full border px-3 py-2 rounded">
