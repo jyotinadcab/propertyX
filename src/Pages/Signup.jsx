@@ -65,7 +65,7 @@ export default function Signup() {
         </div>
 
         <h2 className="text-2xl font-semibold text-white text-center">
-          Create Account 🚀
+          Create Account 
         </h2>
 
         <p className="text-gray-400 text-center text-sm mt-2 mb-6">
