@@ -91,8 +91,9 @@ const PropertyPage = () => {
             <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-md">
               <h3 className="font-semibold text-lg mb-2">{title}</h3>
               <p className="text-gray-500 text-sm">
-                Grow your income with our premium ecosystem.
+                Grow your income with our premium ecosystem. 
               </p>
+         
             </div>
           ))}
         </div>

@@ -62,28 +62,30 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Desktop Right (FIXED HERE) */}
-      <div className="hidden md:flex items-center gap-4">
-        
+      {/* Desktop Right */}
+      <div className="hidden md:flex items-center">
 
-        {/* Login Button */}
-        <Link
-          to="/Login"
-          className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-medium transition"
-        >
-          Login
-        </Link>
+        {/* Joined Buttons (NO GAP) */}
+        <div className="flex overflow-hidden rounded-lg">
 
-        {/* Signup Button */}
-        <Link
-          to="/Signup"
-          className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg font-medium transition"
-        >
-          Signup
-        </Link>
+          <Link
+            to="/Login"
+            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 font-medium transition rounded-l-lg border-r border-white/30"
+          >
+            Login
+          </Link>
+
+          <Link
+            to="/Signup"
+            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 font-medium transition rounded-r-lg"
+          >
+            Signup
+          </Link>
+
+        </div>
 
         {/* Language */}
-        <select className="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm focus:outline-none">
+        <select className="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm focus:outline-none ml-3">
           <option>Select Language</option>
           <option>English</option>
           <option>Hindi</option>
@@ -119,11 +121,19 @@ const Navbar = () => {
           )}
 
           {/* Mobile Auth */}
-          <Link to="/Login" onClick={closeAll} className="bg-green-700 text-white px-4 py-2 rounded text-center">
+          <Link 
+            to="/Login" 
+            onClick={closeAll} 
+            className="bg-red-500 text-white px-4 py-2 rounded text-center"
+          >
             Login
           </Link>
 
-          <Link to="/Signup" onClick={closeAll} className="bg-green-700 text-white px-4 py-2 rounded text-center">
+          <Link 
+            to="/Signup" 
+            onClick={closeAll} 
+            className="bg-green-600 text-white px-4 py-2 rounded text-center"
+          >
             Signup
           </Link>
 

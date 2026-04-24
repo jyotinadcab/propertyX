@@ -1,5 +1,4 @@
 // src/firebase.js
-
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
@@ -10,11 +9,12 @@ const firebaseConfig = {
   appId: "YOUR_APP_ID",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Auth
 export const auth = getAuth(app);
-
-// Google provider
 export const provider = new GoogleAuthProvider();
+
+// Optional (recommended)
+provider.setCustomParameters({
+  prompt: "select_account",
+});

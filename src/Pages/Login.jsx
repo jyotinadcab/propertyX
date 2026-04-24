@@ -15,17 +15,27 @@ export default function Login() {
     console.log("Mobile:", mobile);
   };
 
-  // ✅ Google Sign-In Function
+  // ✅ Google Sign-In
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
+
       const user = result.user;
 
       console.log("User:", user);
+
       alert(`Welcome ${user.displayName}`);
     } catch (error) {
-      console.error(error);
-      alert("Google Sign-In failed");
+      console.error("Google Login Error:", error);
+
+      // Better error message
+      if (error.code === "auth/popup-closed-by-user") {
+        alert("Popup closed before completing sign in.");
+      } else if (error.code === "auth/unauthorized-domain") {
+        alert("Domain not authorized. Add it in Firebase console.");
+      } else {
+        alert(error.message);
+      }
     }
   };
 
@@ -39,23 +49,11 @@ export default function Login() {
         backgroundPosition: "center",
       }}
     >
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
 
-      {/* Glow effects */}
-      <div className="absolute w-[500px] h-[500px] bg-cyan-500/30 blur-[140px] rounded-full top-[-100px] right-[-100px]"></div>
-      <div className="absolute w-[400px] h-[400px] bg-blue-600/30 blur-[140px] rounded-full bottom-[-100px] left-[-100px]"></div>
-
-      {/* Card */}
       <div className="relative w-[380px] bg-white/5 border border-white/10 rounded-2xl p-8 shadow-2xl backdrop-blur-xl">
-
-        {/* ✅ LOGO FIX */}
         <div className="flex justify-center mb-4">
-          <img
-            src={image}
-            alt="Logo"
-            className="w-28 object-contain"
-          />
+          <img src={image} alt="Logo" className="w-28 object-contain" />
         </div>
 
         <h2 className="text-2xl font-semibold text-white text-center">
@@ -67,11 +65,9 @@ export default function Login() {
         </p>
 
         <form onSubmit={handleSubmit}>
-          <label className="text-gray-400 text-sm">
-            Mobile Number
-          </label>
+          <label className="text-gray-400 text-sm">Mobile Number</label>
 
-          <div className="flex items-center mt-2 mb-5 border border-white/10 rounded-lg overflow-hidden bg-white/5 focus-within:border-cyan-400 transition">
+          <div className="flex items-center mt-2 mb-5 border border-white/10 rounded-lg overflow-hidden bg-white/5">
             <span className="px-4 text-cyan-400 border-r border-white/10">
               +91
             </span>
@@ -89,10 +85,11 @@ export default function Login() {
           <button
             type="submit"
             disabled={!isValid}
-            className={`w-full py-3 rounded-lg font-semibold transition ${isValid
-                ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:opacity-90"
+            className={`w-full py-3 rounded-lg font-semibold ${
+              isValid
+                ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-black"
                 : "bg-gray-700 text-gray-400 cursor-not-allowed"
-              }`}
+            }`}
           >
             Send OTP
           </button>
@@ -106,10 +103,9 @@ export default function Login() {
           <div className="flex-1 h-[1px] bg-white/10"></div>
         </div>
 
-        {/* Google Button */}
         <button
           onClick={handleGoogleLogin}
-          className="w-full flex items-center justify-center gap-2 border border-white/10 py-3 rounded-lg text-white hover:bg-white/10 transition"
+          className="w-full flex items-center justify-center gap-2 border border-white/10 py-3 rounded-lg text-white hover:bg-white/10"
         >
           <FcGoogle size={20} />
           <span>Sign in with Google</span>
