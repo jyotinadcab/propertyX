@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from './components/Navbar';
+import ScrollToTop from "./components/ScrollToTop";
 
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
@@ -33,23 +34,24 @@ const Home = () => {
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
-      
-      <Routes>
-        
-        <Route path="/" element={<Home />} />
-        <Route path="/Faqs" element={<Faqs />} />
-        <Route path="/Propertyx" element={<Propertyx />} />
-        <Route path="/Login" element={<Login />} />
+      <main className="pt-20">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Faqs" element={<Faqs />} />
+          <Route path="/Propertyx" element={<Propertyx />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
-        <Route path="/PropertyXGuide" element={<PropertyXGuide />} />
-        <Route path="/ComparisonTable" element={<ComparisonTable />} />
-        <Route path="Whitepaper" element={<Whitepaper />} />
-                <Route path="Blog" element={<Blog />} />
-                <Route path="Helpcenter" element={<Helpcenter/>}/>
-                       <Route path="Support" element={<Support/>}/>
-                       <Route path="Contact" element={<Contact/>}/>
-      </Routes>
+          <Route path="/PropertyXGuide" element={<PropertyXGuide />} />
+          <Route path="/ComparisonTable" element={<ComparisonTable />} />
+          <Route path="/Whitepaper" element={<Whitepaper />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Helpcenter" element={<Helpcenter />} />
+          <Route path="/Support" element={<Support />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </main>
       <Footer />
     </Router>
   );

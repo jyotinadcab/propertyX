@@ -10,6 +10,8 @@ import { MdEmail } from "react-icons/md";
 import logo from "../images/NewLogoWhite-B8AvPPTY.png";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   const companyLinks = [
     { name: "How It Works", path: "/PropertyXGuide" },
     { name: "Whitepaper", path: "/Whitepaper" },
@@ -18,20 +20,24 @@ const Footer = () => {
   ];
 
   const resourceLinks = [
-    { name: "Blog", path: "/blog" },
+    { name: "Blog", path: "/Blog" },
     { name: "Help Center", path: "/Helpcenter" },
-    { name: "Support", path: "/support" },
-    { name: "Contact", path: "/contact" },
+    { name: "Support", path: "/Support" },
+    { name: "Contact", path: "/Contact" },
   ];
 
   return (
-    <footer className="bg-gray-50 text-gray-600 border-t border-gray-200">
+    <footer className="bg-gradient-to-b from-gray-50 to-white text-gray-600 border-t border-gray-200">
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-5 gap-10">
 
         {/* BRAND */}
         <div className="md:col-span-2">
-          <img src={logo} alt="PropertyX" className="h-10 mb-5" />
+          <img
+            src="https://property-x-frontend-rwjk.vercel.app/assets/PropertyX_logo-CxublR5S.png"
+            alt="PropertyX"
+            className="h-10 md:h-11 w-auto object-contain mb-5"
+          />
 
           <p className="text-sm leading-relaxed text-gray-500 mb-6 max-w-md">
             Propx (PropertyX) is a modern fractional ownership platform enabling
@@ -60,7 +66,7 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             {companyLinks.map((item, index) => (
               <li key={index}>
-                <Link to={item.path} className="hover:text-blue-600 transition">
+                <Link to={item.path} className="hover:text-[#2c92ad] transition">
                   {item.name}
                 </Link>
               </li>
@@ -74,7 +80,7 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             {resourceLinks.map((item, index) => (
               <li key={index}>
-                <Link to={item.path} className="hover:text-blue-600 transition">
+                <Link to={item.path} className="hover:text-[#2c92ad] transition">
                   {item.name}
                 </Link>
               </li>
@@ -120,7 +126,7 @@ const Footer = () => {
 
       <div className="border-t border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>© 2026 PropertyX. All rights reserved.</p>
+          <p>© {year} PropertyX. All rights reserved.</p>
 
           <div className="flex gap-6 mt-3 md:mt-0">
             <Link to="/privacy" className="hover:text-blue-600">

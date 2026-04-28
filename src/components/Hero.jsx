@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import icon1 from "../images/icon1.png";
 import icon2 from "../images/icon2.png";
 import icon3 from "../images/icon3.png";
@@ -19,7 +20,7 @@ const FeatureCard = ({ icon, title, desc }) => {
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen bg-white text-gray-900 overflow-hidden font-[Inter]">
+    <div className="relative min-h-screen bg-gradient-to-b from-[#f8fcff] to-white text-gray-900 overflow-hidden font-[Inter]">
 
       {/* MAIN CONTAINER */}
       <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row items-center justify-between">
@@ -53,18 +54,23 @@ const Hero = () => {
 
           {/* BUTTONS */}
           <div className="flex gap-4 mt-8 flex-wrap">
-
-            <button className="bg-gradient-to-r from-[#2c92ad] to-[#247c92] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 transition">
+            <Link
+              to="/Signup"
+              className="bg-gradient-to-r from-[#2c92ad] to-[#247c92] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 transition"
+            >
               Start Investing
-            </button>
+            </Link>
 
-            <button className="border border-gray-300 px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-100 transition">
+            <Link
+              to="/Whitepaper"
+              className="border border-gray-300 px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-100 transition"
+            >
               Read Whitepaper
-            </button>
+            </Link>
 
-            <button className="text-[#2c92ad] font-medium text-sm hover:underline">
-              How it works →
-            </button>
+            <Link to="/PropertyXGuide" className="text-[#2c92ad] font-medium text-sm hover:underline">
+              How it works ->
+            </Link>
 
           </div>
         </div>
